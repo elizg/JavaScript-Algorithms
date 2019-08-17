@@ -29,7 +29,7 @@ function fibonacci(n) {
 function reverse(str) {
   var rtnStr = '';
   for(var i = str.length - 1; i >= 0; i--){
-    rtnStr += str[i];
+    rtnStr += str[i]
   }
   return rtnStr;
 }
@@ -96,10 +96,46 @@ let myString = 'hello!!';
 console.log(subStr(myString, 1, 6));
 
 
-
-
+// remove duplicates from a given array
+function removeDups(arr) {
+  let origArr = [1, 2, 3, 3, 4, 6, 7, 8, 9, 9, 5, 5, 5];
+  let newArr = [];
   
+  origArr.sort();
+
+  let temp;
+
+  for (let i = 0; i < origArr.length; i++) {
+    if(origArr[i] !== temp) {
+      newArr.push(origArr[i]);
+      temp = origArr[i];
+    }
+  }
+return newArr;
+}
+removeDups();
 
 
+// find the missing number in an array
+function findMissingNum(arr) {
+  let sum = 0;
+  for( let i in arr) {
+    sum += arr[i];
+  }
+  let n = arr.length + 1;
+  expectedSum = Math.floor((n*(n + 1))/2);
+  return expectedSum - sum;
+}
+findMissingNum([1,2,3,4,5,6,8,9]);
 
 
+// sum of array
+function sumOfArray(arr) {
+  return arr.reduce(function(a,b) {
+    return a + b
+  }, 0);
+}
+sumOfArray([3, 6, 9]);
+// single line arrow notation
+const sumOfArr = arr => arr.reduce((a,b) => a + b, 0);
+sumOfArr([3,6,9]);
