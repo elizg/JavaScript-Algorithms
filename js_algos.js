@@ -1,3 +1,5 @@
+// There are multiple ways to write each algorithm, I plan to update syntax as I progress
+
 // check if a str is a palindrome and return true or false
 function isPalindrome(str) {
     for(let i = 0; i < str.length/2; i++) {
@@ -9,7 +11,6 @@ function isPalindrome(str) {
 }
 
 isPalindrome('radar');
-
 
 
 // return the nth number in the fibonacci sequence
@@ -139,3 +140,43 @@ sumOfArray([3, 6, 9]);
 // single line arrow notation
 const sumOfArr = arr => arr.reduce((a,b) => a + b, 0);
 sumOfArr([3,6,9]);
+
+
+// Print numbers 1-100, for multiples of 3, print 'Fizz' for multiples of 5, print 'Buzz' for multiples of both 3 & 5, print 'FizzBuzz'
+function fizzBuzz() {
+  for(let i = 0; i <= 100; i++) {
+    if (i % 15 === 0) {
+      console.log("FizzBuzz");
+    } 
+    else if (i % 3 === 0) {
+      console.log("Fizz");
+    }
+    else if (i % 5 === 0) {
+      console.log("Buzz");
+    }
+    else {
+      console.log(i);
+    }
+  }
+}
+
+fizzBuzz();
+
+
+// print a triangle
+function printTriangle(n) {
+  for (var i = 0; i < n; i++) {
+    var str = '';
+    for (var j = 1; j < n-i; j++) {
+      str += ' ';
+    }
+    for (var k = 1; k <= (2*i+1); k++) {
+      str += '#';
+    }
+    console.log(str);
+  }
+}
+printTriangle(9);
+
+// print shapes using a switch case: square, triangle, and diamond
+// RETURN TO ADD SWITCH CASE printShape
