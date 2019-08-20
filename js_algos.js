@@ -159,7 +159,6 @@ function fizzBuzz() {
     }
   }
 }
-
 fizzBuzz();
 
 
