@@ -1,2 +1,2 @@
 # JavaScript-Algorithms
-Beginner JS algorithms
+Beginner JS algorithms & Data Structures
