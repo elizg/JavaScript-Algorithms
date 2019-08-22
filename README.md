@@ -1,2 +1,4 @@
 # JavaScript-Algorithms
-Beginner JS Algorithms & Data Structures I have practiced writing
+Beginner JS Algorithms & Data Structures
+
+for reference and updating as I progress
