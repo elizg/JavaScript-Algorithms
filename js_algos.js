@@ -22,7 +22,27 @@ function fibonacci(n) {
     return arr[n];
   }
   
-  fib(12);
+  fibonacci(12);
+
+// fibonacci alternate
+  function fibonacci(num){
+    // declare vars
+      let a = 1;
+      let b = 0;
+      let temp;
+    
+      // add while loop
+      while (num >= 0){
+        temp = a;
+        a = a + b;
+        b = temp;
+        num--;
+      }
+    
+      return b;
+    }
+
+  fibonacci(9);
   
   
 // reverse and return a str
