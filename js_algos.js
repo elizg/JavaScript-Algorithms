@@ -143,7 +143,7 @@ function fibonacci(n) {
     return arr[n];
   }
   
-  fib(12);
+  fibonacci(12);
   
   
 // reverse and return a str
@@ -297,5 +297,33 @@ function printTriangle(n) {
 }
 printTriangle(9);
 
-// print shapes using a switch case: square, triangle, and diamond
-// RETURN TO ADD SWITCH CASE printShape
+// print shapes using a switch case: square, triangle
+// return to fix when you have more time
+function printShape(shape, height, char) {
+  let ln = "";
+  switch (shape) {
+    case "triangle":
+      for (let i = 1; i <= height; i++) {
+        for (let j = 1; j <= i; j++) {
+          if (j <= i) {
+            ln += char;
+          }
+        }
+        console.log(ln);
+        ln = ""
+      }
+      break;
+      
+    case "square":
+      for (let i = 0; i < height; i++) {
+        ln += char;
+      }
+      for (let i = 0; i < height; i++) {
+        console.log(ln);
+      }
+      break;
+    }
+  }
+  
+  console.log(printShape('square', 3, '%'));
+  console.log(printShape('triangle', 3, '$'));
