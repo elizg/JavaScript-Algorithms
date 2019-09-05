@@ -1,2 +1,4 @@
 # JavaScript-Algorithms
-Beginner JS algorithms
+Beginner JavaScript Algorithms & Data Structures
+
+Learning arrow function syntax 
