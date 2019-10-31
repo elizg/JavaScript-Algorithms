@@ -198,7 +198,7 @@ function printTriangle(n) {
 printTriangle(9);
 
 // print shapes using a switch case: square, triangle
-// return to fix when you have more time
+// TODO update 
 function printShape(shape, height, char) {
   let ln = "";
   switch (shape) {
@@ -227,3 +227,21 @@ function printShape(shape, height, char) {
   
   console.log(printShape('square', 3, '%'));
   console.log(printShape('triangle', 3, '$'));
+
+
+  // shuffle any given array
+  function shuffle(arr) {
+    for (var i = 0; i < arr.length; i++){
+      ranIdx = Math.floor(Math.random() * (arr.length-1));
+      temp = arr[i];
+      arr[i] = arr[ranIdx];
+      arr[ranIdx] = temp;
+    }
+    return arr;
+  }
+
+shuffle([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]);
+// output: (13) [2, 4, 6, 7, 13, 10, 8, 5, 11, 9, 1, 12, 3]
+
+
+
