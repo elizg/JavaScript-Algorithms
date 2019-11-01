@@ -48,8 +48,8 @@ function fibonacci(n) {
   
 // reverse and return a str
 function reverse(str) {
-  var rtnStr = '';
-  for(var i = str.length - 1; i >= 0; i--){
+  let rtnStr = '';
+  for(let i = str.length - 1; i >= 0; i--){
     rtnStr += str[i]
   }
   return rtnStr;
@@ -184,12 +184,12 @@ fizzBuzz();
 
 // print a triangle
 function printTriangle(n) {
-  for (var i = 0; i < n; i++) {
-    var str = '';
-    for (var j = 1; j < n-i; j++) {
+  for (let i = 0; i < n; i++) {
+    let str = '';
+    for (let j = 1; j < n-i; j++) {
       str += ' ';
     }
-    for (var k = 1; k <= (2*i+1); k++) {
+    for (let k = 1; k <= (2*i+1); k++) {
       str += '#';
     }
     console.log(str);
@@ -231,10 +231,10 @@ function printShape(shape, height, char) {
 
   // shuffle any given array
   function shuffle(arr) {
-    for (var i = 0; i < arr.length; i++){
-      ranIdx = Math.floor(Math.random() * (arr.length-1));
+    for (let i = 0; i < arr.length; i++){
+      randIdx = Math.floor(Math.random() * (arr.length-1));
       temp = arr[i];
-      arr[i] = arr[ranIdx];
+      arr[i] = arr[randIdx];
       arr[ranIdx] = temp;
     }
     return arr;
@@ -246,10 +246,12 @@ shuffle([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]);
 
 // square each value in a given array
 function squareArrVals(arr){
-  for (var i = 0; i < arr.length; i++) {
+  for (let i = 0; i < arr.length; i++) {
     arr[i] = arr[i] * arr[i]
   }
   return arr
 }
 squareArrVals([2, 3, 4, 5, 7, 9, 100, 500, 1200]);
 // output: (9) [4, 9, 16, 25, 49, 81, 10000, 250000, 1440000]
+
+
