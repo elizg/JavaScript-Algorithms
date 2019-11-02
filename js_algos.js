@@ -266,3 +266,20 @@ function printOdds(num) {
 printOdds(100);
 // more concise
 for(let i = 1; i < 100; i+=2) console.log(i);
+
+
+
+// swap pairs in a given array
+function swapPairs(arr){
+  for(let i = 0; i < arr.length; i += 2){
+      if(arr[i + 1] == undefined){
+          break;
+      }
+      let temp = arr[i];
+      arr[i]= arr[i + 1];
+      arr[i + 1]= temp;
+  }
+  return arr;
+}
+swapPairs([1, 2, 3, 4]);
+// output: (4) [2, 1, 4, 3]
