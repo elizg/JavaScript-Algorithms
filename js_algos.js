@@ -255,3 +255,14 @@ squareArrVals([2, 3, 4, 5, 7, 9, 100, 500, 1200]);
 // output: (9) [4, 9, 16, 25, 49, 81, 10000, 250000, 1440000]
 
 
+// print odds 1-99
+function printOdds(num) {
+  for (let i = 1; i < num; i++) {
+    if(i % 2 === 1) {
+      console.log(i);
+    }
+  }
+}
+printOdds(100);
+// more concise
+for(let i = 1; i < 100; i+=2) console.log(i);
