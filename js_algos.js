@@ -286,7 +286,7 @@ swapPairs([1, 2, 3, 4]);
 
 
 
-// take in two arrays and concatenates without using built in concat()
+// take in two arrays and concatenate without using built in concat()
 function concatArrs(arr1, arr2){
   let newArr = [];
   for(let i = 0; i < arr1.length; i++){
