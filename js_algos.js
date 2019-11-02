@@ -286,7 +286,7 @@ swapPairs([1, 2, 3, 4]);
 
 
 
-// takes in two arrays and concatenates
+// take in two arrays and concatenates without using built in concat()
 function concatArrs(arr1, arr2){
   let newArr = [];
   for(let i = 0; i < arr1.length; i++){
@@ -299,3 +299,17 @@ function concatArrs(arr1, arr2){
 }
 console.log(concatArrs(["a", "b", "c"], [1, 2, 3]));
 // output: (6) ["a", "b", "c", 1, 2, 3]
+
+
+
+// count how many characters are in a given string, do not count spaces
+function countChars(str){
+  let splitString = str.split(" ");
+  let joinString = splitString.join("");
+  return joinString.length;
+}
+console.log(countChars("You are my sunshine")); // output: 16
+console.log(countChars("You are my sunshine <3")); // output: 18
+
+
+
