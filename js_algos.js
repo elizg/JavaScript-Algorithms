@@ -313,3 +313,11 @@ console.log(countChars("You are my sunshine <3")); // output: 18
 
 
 
+// push item(s) into end of array
+array.push(item1, item2, item3);
+// unshift(); add item(s) to beginning of array, shifts indices, returns added items
+array.unshift(item1);
+// pop(); remove item from end of array
+array.pop();
+// shift(); remove item from front of array, shift indices, returns removed item
+array.shift(item1);
