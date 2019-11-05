@@ -1,4 +1,6 @@
 # JavaScript-Algorithms
-Beginner JavaScript Algorithms & Data Structures
+Beginner JavaScript Algorithms & Data Structures. 
 
-Learning arrow function syntax 
+Learning logic and syntax for JS algorithms, learning by doing. 
+
+Planning to add arrow function syntax for each function as I progress.  

@@ -356,3 +356,26 @@ function minToFront(arr){
 
 console.log(minToFront([99, 125, 32, 1, 24, 265, 3]));
 // output: (7) [1, 99, 125, 32, 24, 265, 3]
+
+
+
+// return the sum of all digits of a number
+function sumDigits(num){
+  let sum = 0;
+  while(num > 9){
+      while(num > 9){
+          sum += num % 10
+          num = Math.floor(num/10);
+      }
+      sum += num % 10
+      num = sum;
+      sum = 0;
+  }
+  return num
+}
+console.log(sumDigits(11));
+// output: 2
+console.log(sumDigits(345));
+// output: 3
+console.log(sumDigits(12345));
+// output: 6
