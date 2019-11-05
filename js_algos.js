@@ -379,3 +379,5 @@ console.log(sumDigits(345));
 // output: 3
 console.log(sumDigits(12345));
 // output: 6
+
+// TODO update sumDigits for negative number
