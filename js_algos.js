@@ -381,3 +381,18 @@ console.log(sumDigits(12345));
 // output: 6
 
 // TODO update sumDigits for negative number
+
+
+
+// find and return the maximum number in a given array
+function arrayMax(arr) {
+  let len = arr.length, max = -Infinity;
+  while (len--) {
+    if (arr[len] > max) {
+      max = arr[len];
+    }
+  }
+  return max;
+};
+arrayMax([1, 2, 3, 99, 5]);
+// output: 99
