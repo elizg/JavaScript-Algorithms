@@ -117,24 +117,18 @@ let myString = 'hello!!';
 console.log(subStr(myString, 1, 6));
 
 
-// remove duplicates from a given array
+// remove duplicates from an array
 function removeDups(arr) {
-  let origArr = [1, 2, 3, 3, 4, 6, 7, 8, 9, 9, 5, 5, 5];
   let newArr = [];
-  
-  origArr.sort();
-
-  let temp;
-
-  for (let i = 0; i < origArr.length; i++) {
-    if(origArr[i] !== temp) {
-      newArr.push(origArr[i]);
-      temp = origArr[i];
+  for (let i = 0; i < arr.length; i++) {
+    if(arr[i] !== arr[i + 1]) {
+      newArr.push(arr[i]);
     }
   }
 return newArr;
 }
-removeDups();
+removeDups([1, 2, 3, 3, 4, 5, 5, 5, 6, 7, 8, 9, 9]);
+// output: (9) [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 
 // find the missing number in an array
