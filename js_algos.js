@@ -380,13 +380,13 @@ console.log(sumDigits(12345));
 
 // find and return the maximum number in a given array
 function arrayMax(arr) {
-  let len = arr.length, largest = -Infinity;
+  let len = arr.length, max = -Infinity;
   while (len--) {
-    if (arr[len] > largest) {
-     largest = arr[len];
+    if (arr[len] > max) {
+     max = arr[len];
     }
   }
-  return largest;
+  return max;
 };
 arrayMax([1, 2, 3, 99, 5]);
 // output: 99
