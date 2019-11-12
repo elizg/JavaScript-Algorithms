@@ -441,5 +441,5 @@ function secondLargest(arr) {
       return secLargest;
   }
 }
-console.log(secondLargest([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+secondLargest([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
 // output: 9
