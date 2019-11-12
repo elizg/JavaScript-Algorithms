@@ -380,13 +380,13 @@ console.log(sumDigits(12345));
 
 // find and return the maximum number in a given array
 function arrayMax(arr) {
-  let len = arr.length, max = -Infinity;
+  let len = arr.length, largest = -Infinity;
   while (len--) {
-    if (arr[len] > max) {
-      max = arr[len];
+    if (arr[len] > largest) {
+     largest = arr[len];
     }
   }
-  return max;
+  return largest;
 };
 arrayMax([1, 2, 3, 99, 5]);
 // output: 99
@@ -418,3 +418,28 @@ function removePunctuation(str, len) {
 removePunctuation("Hello, can you remove the punctuation? Thank you!", 1);
 // output: "Hello can you remove the punctuation Thank you"
 // TODO review removePunctuation
+
+
+
+// return the second largest number in an array
+function secondLargest(arr) {
+  if (arr instanceof Array) {
+      let largest = [arr[0],0];
+      for(let i = 0; i < arr.length; i++){
+          if(arr[i] > largest[0]){
+              largest[0] = arr[i];
+              largest[1] = i;
+          } 
+      }
+      arr[largest[1]] = null;
+      let secLargest = arr[0];
+      for(let i = 0; i < arr.length; i++){
+          if(largest[0] - arr[i] < largest[0] - secLargest && arr[i] != largest[0]){
+              secLargest = arr[i];
+          }
+      }
+      return secLargest;
+  }
+}
+console.log(secondLargest([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+// output: 9
