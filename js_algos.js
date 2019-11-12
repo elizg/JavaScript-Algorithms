@@ -443,3 +443,16 @@ function secondLargest(arr) {
 }
 secondLargest([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
 // output: 9
+
+
+
+// return the second to last value in an array
+function secondToLast(arr) {
+  let len = arr.length;
+  if(arr instanceof Array) {
+      if(len < 2) return null;
+      return arr[len - 2];
+  }
+}
+secondToLast([1, 2, 3, 4, 5, 6, 7]);
+// output: 6
