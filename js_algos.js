@@ -15,7 +15,7 @@ isPalindrome('radar');
 
 // return the nth number in the fibonacci sequence
 function fibonacci(n) {
-    let arr = [0, 1];
+    var arr = [0, 1];
     if (n <= 2) return 1;
     for (let i = 2; i <= n; i++) {
       arr[i] = arr[i - 1] + arr[i - 2];
@@ -28,9 +28,9 @@ function fibonacci(n) {
   // fibonacci alternate
   function fibonacci(num){
     // declare vars
-      let a = 1;
-      let b = 0;
-      let temp;
+      var a = 1;
+      var b = 0;
+      var temp;
     
       // add while loop
       while (num >= 0){
@@ -60,7 +60,7 @@ reverse('learning everyday');
 
 // sort a given array
 function bubbleSort(arr) {
-  let n = arr.length;
+  var n = arr.length;
   // let temp;
     while(n > 1) {
       for (let i = 0; i < n - 1; i++) {
@@ -119,7 +119,7 @@ console.log(subStr(myString, 1, 6));
 
 // remove duplicates from an array
 function removeDups(arr) {
-  let newArr = [];
+  var newArr = [];
   for (let i = 0; i < arr.length; i++) {
     if(arr[i] !== arr[i + 1]) {
       newArr.push(arr[i]);
@@ -194,7 +194,7 @@ printTriangle(9);
 // print shapes using a switch case: square, triangle
 // TODO update 
 function printShape(shape, height, char) {
-  let ln = "";
+  var ln = "";
   switch (shape) {
     case "triangle":
       for (let i = 1; i <= height; i++) {
@@ -282,7 +282,7 @@ swapPairs([1, 2, 3, 4]);
 
 // take in two arrays and concatenate without using built in concat()
 function concatArrs(arr1, arr2){
-  let newArr = [];
+  var newArr = [];
   for(let i = 0; i < arr1.length; i++){
       newArr.push(arr1[i]);
   }
@@ -355,7 +355,7 @@ console.log(minToFront([99, 125, 32, 1, 24, 265, 3]));
 
 // return the sum of all digits of a number
 function sumDigits(num){
-  let sum = 0;
+  var sum = 0;
   while(num > 9){
       while(num > 9){
           sum += num % 10
@@ -380,7 +380,7 @@ console.log(sumDigits(12345));
 
 // find and return the maximum number in a given array
 function arrayMax(arr) {
-  let len = arr.length, max = -Infinity;
+  var len = arr.length, max = -Infinity;
   while (len--) {
     if (arr[len] > max) {
      max = arr[len];
@@ -448,7 +448,7 @@ secondLargest([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
 
 // return the second to last value in an array
 function secondToLast(arr) {
-  let len = arr.length;
+  var len = arr.length;
   if(arr instanceof Array) {
       if(len < 2) return null;
       return arr[len - 2];
@@ -498,8 +498,8 @@ class LinkedList {
 
   // returns a formatted string of the list
   toString() {
-      let node = this.head;
-      let s = "[ "
+      var node = this.head;
+      var s = "[ "
       while (node != null) {
           if (node.next == null) break;
           s += node.val + ", ";
@@ -511,8 +511,8 @@ class LinkedList {
 
   // returns average value of all the nodes
   average() {
-      let node = this.head
-      let length = 0, sum = 0;
+      var node = this.head
+      var length = 0, sum = 0;
       while (node != null) {
           length++;
           sum += node.val;
@@ -529,7 +529,11 @@ class node {
   }
 }
 
-let list = new LinkedList();
+var list = new LinkedList();
 list.add(3).add(55).add(300);
 console.log(list.average());
 // output: 119.33333333333333
+
+
+
+
