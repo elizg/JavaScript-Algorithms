@@ -48,7 +48,7 @@ function fibonacci(n) {
   
 // reverse and return a str
 function reverse(str) {
-  let rtnStr = '';
+  var rtnStr = '';
   for(let i = str.length - 1; i >= 0; i--){
     rtnStr += str[i]
   }
@@ -133,7 +133,7 @@ removeDups([1, 2, 3, 3, 4, 5, 5, 5, 6, 7, 8, 9, 9]);
 
 // find the missing number in an array
 function findMissingNum(arr) {
-  let sum = 0;
+  var sum = 0;
   for( let i in arr) {
     sum += arr[i];
   }
@@ -179,7 +179,7 @@ fizzBuzz();
 // print a triangle
 function printTriangle(n) {
   for (let i = 0; i < n; i++) {
-    let str = '';
+    var str = '';
     for (let j = 1; j < n-i; j++) {
       str += ' ';
     }
@@ -269,7 +269,7 @@ function swapPairs(arr){
       if(arr[i + 1] == undefined){
           break;
       }
-      let temp = arr[i];
+      var temp = arr[i];
       arr[i]= arr[i + 1];
       arr[i + 1]= temp;
   }
@@ -334,7 +334,7 @@ arrayMin([3,6,9,1]);
 
 // find the min val of an array and move it to idx 0
 function minToFront(arr){
-  let min = 0;
+  var min = 0;
   for (let i = 1; i < arr.length; i ++){
       if (arr[i] < arr[min]){
           min = i;
@@ -396,9 +396,9 @@ arrayMax([1, 2, 3, 99, 5]);
 // remove the punctuation from a given string
 function removePunctuation(str, len) {
   if (typeof str == "string" && typeof len == "number") {
-      let s = "";
-      let start = str.length - 1;
-      let total = str.length;
+      var s = "";
+      var start = str.length - 1;
+      var total = str.length;
       while (total > len && start >= 0) {
           if (str[start] == "." || str[start] == "," || str[start] == "!" || str[start] == "?" || str[start] == ";" || str[start] == ":" || str[start] == "-" || str[start] == "'") {
               start--;
@@ -424,7 +424,7 @@ removePunctuation("Hello, can you remove the punctuation? Thank you!", 1);
 // return the second largest number in an array
 function secondLargest(arr) {
   if (arr instanceof Array) {
-      let largest = [arr[0],0];
+      var largest = [arr[0],0];
       for(let i = 0; i < arr.length; i++){
           if(arr[i] > largest[0]){
               largest[0] = arr[i];
@@ -432,7 +432,7 @@ function secondLargest(arr) {
           } 
       }
       arr[largest[1]] = null;
-      let secLargest = arr[0];
+      var secLargest = arr[0];
       for(let i = 0; i < arr.length; i++){
           if(largest[0] - arr[i] < largest[0] - secLargest && arr[i] != largest[0]){
               secLargest = arr[i];
@@ -461,7 +461,7 @@ secondToLast([1, 2, 3, 4, 5, 6, 7]);
 
 // remove the negative numbers from an array
 function removeNeg(arr) {
-  let position = 0;
+  var position = 0;
   for(let i = 0; i < arr.length; i++) {
       if(arr[i] < 0) {
           continue;
