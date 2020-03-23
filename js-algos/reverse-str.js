@@ -8,4 +8,4 @@ function reverse(str) {
   }
   
   reverse('learning everyday');
-  // output: s"yadyreve gninrael"
+  // output: "yadyreve gninrael"
